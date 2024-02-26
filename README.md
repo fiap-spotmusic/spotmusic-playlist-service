@@ -10,13 +10,16 @@ Este repositório contém o serviço de gerenciamento de playlists da SpotMusic,
 - Gerenciamento de acesso e permissões para playlists colaborativas.
 - Recomendações personalizadas de músicas para adicionar às playlists.
 
-## Arquitetura
+## Arquitetura do core da SpotMusic
+
 Este serviço faz parte de uma arquitetura de microserviços e é construído com base em APIs RESTful. Ele é projetado para ser seguro, confiável e facilmente escalável.
 
+![Diagrama da Arquitetura do core da SpotMusic](./c4-model-components.drawio.png)
+
 ## Pilha Tecnológica
-- **Linguagem de Programação:** Python com Flask
-- **Banco de Dados:** MySQL (Nome do Banco: `spotmusic_playlists`)
-- **Fila de Mensagens:** Amazon SQS (Nome da Fila: `spotmusic_playlist_updates`)
+- **Linguagem de Programação:** NodeJS
+- **Banco de Dados:** Dynamo DB
+- **Fila de Mensagens:** Amazon SQS
 - **Monitoramento:** Zabbix
 
 ## Configuração e Instalação
@@ -43,3 +46,4 @@ flask db upgrade
 
 # Inicie o serviço
 flask run
+```
